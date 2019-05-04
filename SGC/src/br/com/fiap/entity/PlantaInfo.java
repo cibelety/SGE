@@ -23,34 +23,34 @@ public class PlantaInfo {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "planta_info")
 	private int codigo;
 
-	@Column(name = "nm_planta_info", nullable = false, length=80)
+	@Column(name = "nm_planta_info", nullable = false, length = 80)
 	private String nome;
 
-	@Column(name = "nm_especie", length=80)
+	@Column(name = "nm_especie", length = 80)
 	private String nomeEspecie;
 
-	@Column(name = "ds_temperatura_ideal", length=50)
+	@Column(name = "ds_temperatura_ideal", length = 50)
 	private String temperaturaIdeal;
 
-	@Column(name = "ds_umidade_ideal", length=50)
+	@Column(name = "ds_umidade_ideal", length = 50)
 	private String umidadeIdeal;
 
-	@Column(name = "ds_luminosidade_ideal", length=50)
+	@Column(name = "ds_luminosidade_ideal", length = 50)
 	private String luminosidadeIdeal;
 
-	@Column(name = "ds_rega_ideal", length=50)
+	@Column(name = "ds_rega_ideal", length = 50)
 	private String regaIdeal;
 
-	@Column(name = "ds_periodo_plantio_ideal", length=50)
+	@Column(name = "ds_periodo_plantio_ideal", length = 50)
 	private String periodoPlantioIdeal;
 
-	@Column(name = "ds_periodo_colheita_ideal", length=50)
+	@Column(name = "ds_periodo_colheita_ideal", length = 50)
 	private String periodoColheitaIdeal;
 
-	@Column(name = "ds_cuidados_especiais", length=200)
+	@Column(name = "ds_cuidados_especiais", length = 200)
 	private String cuidadosEspeciais;
 
-	@Column(name = "ds_plantas_convivencia", length=200)
+	@Column(name = "ds_plantas_convivencia", length = 200)
 	private String plantasConvivencia;
 
 	@Column(name = "fl_foto_planta_info")
@@ -59,8 +59,46 @@ public class PlantaInfo {
 
 //	@OneToMany(mappedBy="departamento", cascade = CascadeType.PERSIST)
 //	private List<AtualizacaoPlantaInfo> atualizacoesPlantaInfo = new ArrayList<AtualizacaoPlantaInfo>;
+
+	public PlantaInfo() {
+		super();
+	}
+
+	public PlantaInfo(String nome, String nomeEspecie, String temperaturaIdeal, String umidadeIdeal,
+			String luminosidadeIdeal, String regaIdeal, String periodoPlantioIdeal, String periodoColheitaIdeal,
+			String cuidadosEspeciais, String plantasConvivencia, byte[] foto) {
+		super();
+		this.nome = nome;
+		this.nomeEspecie = nomeEspecie;
+		this.temperaturaIdeal = temperaturaIdeal;
+		this.umidadeIdeal = umidadeIdeal;
+		this.luminosidadeIdeal = luminosidadeIdeal;
+		this.regaIdeal = regaIdeal;
+		this.periodoPlantioIdeal = periodoPlantioIdeal;
+		this.periodoColheitaIdeal = periodoColheitaIdeal;
+		this.cuidadosEspeciais = cuidadosEspeciais;
+		this.plantasConvivencia = plantasConvivencia;
+		this.foto = foto;
+	}
 	
-	
+	public PlantaInfo(int codigo, String nome, String nomeEspecie, String temperaturaIdeal, String umidadeIdeal,
+			String luminosidadeIdeal, String regaIdeal, String periodoPlantioIdeal, String periodoColheitaIdeal,
+			String cuidadosEspeciais, String plantasConvivencia, byte[] foto) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.nomeEspecie = nomeEspecie;
+		this.temperaturaIdeal = temperaturaIdeal;
+		this.umidadeIdeal = umidadeIdeal;
+		this.luminosidadeIdeal = luminosidadeIdeal;
+		this.regaIdeal = regaIdeal;
+		this.periodoPlantioIdeal = periodoPlantioIdeal;
+		this.periodoColheitaIdeal = periodoColheitaIdeal;
+		this.cuidadosEspeciais = cuidadosEspeciais;
+		this.plantasConvivencia = plantasConvivencia;
+		this.foto = foto;
+	}
+
 	public int getCodigo() {
 		return codigo;
 	}
@@ -156,15 +194,14 @@ public class PlantaInfo {
 	public void setFoto(byte[] foto) {
 		this.foto = foto;
 	}
-	
-/*	
-	public List<AtualizacaoPlantaInfo> getAtualizacoesPlantaInfo() {
-		return atualizacoesPlantaInfo;
-	}
 
-	public void setAtualizacoesPlantaInfo(List<AtualizacaoPlantaInfo> atualizacoesPlantaInfo) {
-		this.atualizacoesPlantaInfo = atualizacoesPlantaInfo;
-	}
-*/
-	
+	/*
+	 * public List<AtualizacaoPlantaInfo> getAtualizacoesPlantaInfo() { return
+	 * atualizacoesPlantaInfo; }
+	 * 
+	 * public void setAtualizacoesPlantaInfo(List<AtualizacaoPlantaInfo>
+	 * atualizacoesPlantaInfo) { this.atualizacoesPlantaInfo =
+	 * atualizacoesPlantaInfo; }
+	 */
+
 }
